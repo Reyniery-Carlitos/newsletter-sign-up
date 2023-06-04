@@ -4,6 +4,7 @@ const inputEmailValue = document.getElementById('input-email');
 const spanText = document.getElementById('span-text');
 const mainInfoContainer = document.getElementById('main-info-container');
 const successActiveSection = document.getElementById('success-active-section');
+const personalEmail = document.getElementById('personal-email');
 
 formValues.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -13,6 +14,7 @@ formValues.addEventListener('submit', (e) => {
         spanText.classList.add('hide');
         mainInfoContainer.classList.add('inactive');
         successActiveSection.classList.remove('inactive');
+        personalEmail.innerHTML = inputEmailValue.value;
     }else{
         inputEmailValue.classList.add('error');
         spanText.classList.remove('hide');
