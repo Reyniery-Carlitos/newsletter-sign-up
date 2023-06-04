@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--dark-slate-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 54% 44%;
+    padding: 1.5em;
+    width: 60vw;
+    gap: 1em;
+}
+
+.container-info,
+.form,
+.container-input-email,
+.container-success-active,
+.container-success-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.container-info {
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+}
+
+.title {
+    color: #23243e;
+    font-size: 3.5em;
+}
+
+.paragraph {
+    color: var(--charcoal-grey);
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+
+.list-items {
+    display: flex;
+    gap: 1em;
+}
+
+.container-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    gap: 1.5em;
+}
+
+.form .container-input-email {
+    gap: 0.5em;
+    padding-top: 1.5em;
+}
+
+.form input {
+    border: 1px solid var(--grey);
+    border-radius: 0.5em;
+    height: 4em;
+}
+
+.form .error {
+    background-color: #ffe8e6;
+    border: 1px solid #ff0062;
+}
+
+.container-text-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-text-input {
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+.container-text-input span {
+    color: rgb(255, 0, 43);
+}
+
+.container-text-input .hide {
+    visibility: hidden;
+}
+
+.form label {
+    color: var(--charcoal-grey);
+}
+
+.form .email-input {
+    padding-left: 2em;
+}
+
+.submit-button {
+    color: white;
+    font-weight: bold;
+    background-color: var(--dark-slate-grey);
+}
+
+.submit-button:hover {
+    background: linear-gradient(90deg, rgba(254, 82, 122, 1) 0%, rgba(255, 104, 61, 1) 100%);
+    -webkit-box-shadow: 0px 29px 56px -19px rgba(254, 82, 122, 1);
+    -moz-box-shadow: 0px 29px 56px -19px rgba(254, 82, 122, 1);
+    box-shadow: 0px 29px 56px -19px rgba(254, 82, 122, 1);
+}
+
+.container-success-active {
+    background-color: var(--white);
+    border-radius: 1.5em;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    padding: 3.5em;
+    width: 32%;
+}
+
+.container-success-active p {
+    font-weight: 400;
+    color: var(--dark-slate-grey);
+    font-size: 1em;
+}
+
+.container-success-active h1 {
+    font-size: 2.8em;
+}
+
+.container-success-active span {
+    color: var(--dark-slate-grey);
+    font-weight: bolder;
+}
+
+.container-success-active button {
+    height: 4em;
+    border: none;
+    border-radius: 0.5em;
+    width: 100%;
+}
+
+.container-success-active img {
+    width: 3em;
+}
+
+
+.inactive {
+    visibility: hidden;
+    display: none;
+}
+
+.attribution {
+    color: var(--white);
+    padding: 1em;
+}
+
+.attribution a {
+    color: rgb(0, 81, 255);
+    text-decoration: none;
+}
+
+.attribution span {
+    font-size: 1.5em;
+    color: red;
+}
+
+@media only screen and (max-width: 1030px) {
+    .container-success-active {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .container-success-active {
+        width: 50%;
+        padding: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .container {
+        width: 90vw;
+        grid-template-columns: 100%;
+    }
+
+    .container-img {
+        grid-row: 1;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .container-success-active {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .container-success-active {
+        width: 70%;
+    }
+
+    .container-success-active h1 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        width: 100vw;
+        /* border-radius: 0px; */
+    }
+
+    .container-success-active {
+        border-radius: 0px;
+        justify-content: space-around;
+        width: 100vw;
+        height: 100vh;
+    }
+}
